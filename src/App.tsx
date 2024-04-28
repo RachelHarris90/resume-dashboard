@@ -10,11 +10,10 @@ function App() {
       <header className="App-header">
         <SideBar />
       </header>
-      <main className="w-full">
+      <main className="w-full gap-2 flex flex-col">
         <Home />
         <AboutMe />
         <Experience />
-        <Skills />
       </main>
     </div>
   );

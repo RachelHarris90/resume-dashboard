@@ -2,6 +2,7 @@ import { Navigation } from "../../components/Navigation/Navigation";
 import rachelProfilePicture from "./rachelProfilePicture.jpg";
 import LinkedInLogo from "./linkedin-logo.png";
 import GithubLogo from "./github-logo.png";
+import { Skills } from "../Skills/Skills";
 
 export const SideBar = () => {
   return (
@@ -19,7 +20,8 @@ export const SideBar = () => {
           <img src={GithubLogo} className="bg-rachel-light rounded-lg" />
         </a>
       </div>
-      <Navigation />
+      {/* <Navigation /> */}
+      <Skills />
     </div>
   );
 };

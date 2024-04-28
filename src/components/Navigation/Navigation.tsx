@@ -10,17 +10,13 @@ const navItems = [
     label: "Experience",
   },
   {
-    link: "#skills",
-    label: "Skills",
+    link: "/education",
+    label: "Education",
   },
-  // {
-  //   link: "/education",
-  //   label: "Education",
-  // },
-  // {
-  //   link: "/portfolio",
-  //   label: "Portfolio",
-  // },
+  {
+    link: "/portfolio",
+    label: "Portfolio",
+  },
 ];
 
 export const Navigation = () => {

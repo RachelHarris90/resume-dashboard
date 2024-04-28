@@ -6,16 +6,16 @@ export const Bar = ({ experience }: { experience: ExperienceHistory }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="border border-slate-200 rounded p-2">
+    <div className="p-2">
       <li
         key={experience.id}
         className="flex w-full items-center justify-between transition-all"
         onClick={() => setIsOpen(!isOpen)}
       >
         <>
-          <span className="w-1/4">{experience.role}</span>
+          <span className="w-1/4 font-semibold">{experience.role}</span>
           <div className="flex self-stretch transition-all w-3/4">
-            <ul className="flex w-full list-none overflow-hidden rounded-default p-0">
+            <ul className="flex w-full list-none overflow-hidden rounded p-0">
               {experience.workBreakdown.map((work, i) => (
                 <li
                   style={{
@@ -27,17 +27,15 @@ export const Bar = ({ experience }: { experience: ExperienceHistory }) => {
                     padding: "2px",
                     verticalAlign: "middle",
                   }}
-                >
-                  <h3 className="text-xs">{work.workType}</h3>
-                </li>
+                ></li>
               ))}
             </ul>
           </div>
         </>
       </li>
       {isOpen && (
-        <div>
-          <div className="flex flex-row justify-between">
+        <div className="pt-4">
+          <div className="flex flex-row justify-between font-semibold">
             <h4>{experience.company}</h4>
             <div>
               <span>{`${experience.startDate?.toLocaleString("default", { month: "long" })}, ${experience.startDate?.getFullYear()}`}</span>

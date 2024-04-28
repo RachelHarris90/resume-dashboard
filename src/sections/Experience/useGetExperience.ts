@@ -323,15 +323,20 @@ export const useGetExperience = () => {
 };
 
 export const useGetBarColor = () => {
-  const workTypes = experienceHistory.flatMap((experience) =>
-    experience.workBreakdown.map((work) => work.workType),
-  );
-  const backgroundColor: { workType: string; color: string }[] = workTypes.map(
-    (type, i) => ({
-      workType: type,
-      color: barColors[i],
-    }),
-  );
+  const uniqueWorkTypes = new Set<string>();
+  const backgroundColor: { workType: string; color: string }[] = [];
+
+  experienceHistory.forEach((experience) => {
+    experience.workBreakdown.forEach((work) => {
+      if (!uniqueWorkTypes.has(work.workType)) {
+        uniqueWorkTypes.add(work.workType);
+        backgroundColor.push({
+          workType: work.workType,
+          color: barColors[backgroundColor.length % barColors.length],
+        });
+      }
+    });
+  });
 
   return backgroundColor;
 };
