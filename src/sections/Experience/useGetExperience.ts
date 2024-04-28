@@ -1,4 +1,5 @@
 export type ExperienceHistory = {
+  id: string;
   role: string;
   company: string;
   startDate: Date;
@@ -9,7 +10,8 @@ export type ExperienceHistory = {
 
 const experienceHistory: ExperienceHistory[] = [
   {
-    role: "Software Engineer (current)",
+    id: "598c2b6c-89ea-4ede-8081-8b4c5ea0d9ab",
+    role: "Software Engineer",
     company: "Culture Amp",
     startDate: new Date("2022-07"),
     endDate: new Date(),
@@ -31,6 +33,7 @@ const experienceHistory: ExperienceHistory[] = [
     ],
   },
   {
+    id: "239763ab-5f33-442e-add9-8f4d04323be2",
     role: "Senior Delivery Lead",
     company: "Culture Amp",
     startDate: new Date("2021-06"),
@@ -48,15 +51,16 @@ const experienceHistory: ExperienceHistory[] = [
       },
       {
         workType: "Stakeholder comms & reporting",
-        workPercentage: 15,
+        workPercentage: 20,
       },
       {
         workType: "Process improvement",
-        workPercentage: 15,
+        workPercentage: 20,
       },
     ],
   },
   {
+    id: "0e7258d5-fada-4ea0-bc72-946c3d2c6a32",
     role: "Founder & Director",
     company: "Hill Top Pizzeria & Takeaway",
     startDate: new Date("2020-01"),
@@ -83,6 +87,7 @@ const experienceHistory: ExperienceHistory[] = [
     ],
   },
   {
+    id: "218cd7bd-ca6b-4612-b337-49ae996e6af8",
     role: "Product Manager",
     company: "MYOB",
     startDate: new Date("2019-05"),
@@ -92,11 +97,11 @@ const experienceHistory: ExperienceHistory[] = [
     workBreakdown: [
       {
         workType: "Roadmap & story preparation",
-        workPercentage: 20,
+        workPercentage: 40,
       },
       {
         workType: "User research",
-        workPercentage: 40,
+        workPercentage: 25,
       },
       {
         workType: "Stakeholder management",
@@ -109,6 +114,7 @@ const experienceHistory: ExperienceHistory[] = [
     ],
   },
   {
+    id: "686b00d4-d582-4544-bc4b-c3cd4d4325a0",
     role: "Development Lead",
     company: "MYOB",
     startDate: new Date("2017-07"),
@@ -122,11 +128,11 @@ const experienceHistory: ExperienceHistory[] = [
       },
       {
         workType: "Planning & forecasting",
-        workPercentage: 15,
+        workPercentage: 20,
       },
       {
         workType: "Stakeholder comms & reporting",
-        workPercentage: 15,
+        workPercentage: 20,
       },
       {
         workType: "Process improvement",
@@ -139,6 +145,7 @@ const experienceHistory: ExperienceHistory[] = [
     ],
   },
   {
+    id: "b7c220c7-eb9a-45d5-ba04-f2ebfd9dfea9",
     role: "Senior Consultant (Product & Delivery)",
     company: "Elabor8",
     startDate: new Date("2016-07"),
@@ -161,6 +168,7 @@ const experienceHistory: ExperienceHistory[] = [
     ],
   },
   {
+    id: "fec45303-ae45-40df-8387-553f6c2c9bbb",
     role: "Delivery Manager - ERP",
     company: "Metcash",
     startDate: new Date("2015-11"),
@@ -187,6 +195,7 @@ const experienceHistory: ExperienceHistory[] = [
     ],
   },
   {
+    id: "2ea9bdb6-ff0c-4365-9d6c-dc57ee11faa6",
     role: "Operations Manager - ERP",
     company: "Metcash",
     startDate: new Date("2015-01"),
@@ -208,11 +217,12 @@ const experienceHistory: ExperienceHistory[] = [
       },
       {
         workType: "Business support & training",
-        workPercentage: 40,
+        workPercentage: 20,
       },
     ],
   },
   {
+    id: "006bc432-e0c1-4a8f-b5d8-f5377fc2abb5",
     role: "Delivery Team Leader - ERP",
     company: "Metcash",
     startDate: new Date("2014-05"),
@@ -239,6 +249,7 @@ const experienceHistory: ExperienceHistory[] = [
     ],
   },
   {
+    id: "35b94b2c-e4fb-43c0-b2e3-df77d315d50b",
     role: "Business Analyst",
     company: "Metcash",
     startDate: new Date("2011-01"),
@@ -262,6 +273,65 @@ const experienceHistory: ExperienceHistory[] = [
   },
 ];
 
+const barColors = [
+  "#f0f9ff",
+  "#e0f2fe",
+  "#bae6fd",
+  "#7dd3fc",
+  "#38bdf8",
+  "#0ea5e9",
+  "#f0f9ff",
+  "#e0f2fe",
+  "#bae6fd",
+  "#7dd3fc",
+  "#38bdf8",
+  "#0ea5e9",
+  "#f0f9ff",
+  "#e0f2fe",
+  "#bae6fd",
+  "#7dd3fc",
+  "#38bdf8",
+  "#0ea5e9",
+  "#f0f9ff",
+  "#e0f2fe",
+  "#bae6fd",
+  "#7dd3fc",
+  "#38bdf8",
+  "#0ea5e9",
+  "#f0f9ff",
+  "#e0f2fe",
+  "#bae6fd",
+  "#7dd3fc",
+  "#38bdf8",
+  "#0ea5e9",
+  "#f0f9ff",
+  "#e0f2fe",
+  "#bae6fd",
+  "#7dd3fc",
+  "#38bdf8",
+  "#0ea5e9",
+  "#f0f9ff",
+  "#e0f2fe",
+  "#bae6fd",
+  "#7dd3fc",
+  "#38bdf8",
+  "#0ea5e9",
+];
+
 export const useGetExperience = () => {
   return experienceHistory;
+};
+
+export const useGetBarColor = () => {
+  const workTypes = experienceHistory.flatMap((experience) =>
+    experience.workBreakdown.map((work) => work.workType),
+  );
+  const backgroundColor: { workType: string; color: string }[] = workTypes.map(
+    (type, i) => ({
+      workType: type,
+      color: barColors[i],
+    }),
+  );
+
+  return backgroundColor;
 };

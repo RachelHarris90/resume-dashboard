@@ -2,7 +2,7 @@ import { Card } from "../../commonComponents/Card";
 
 export const AboutMe = () => {
   return (
-    <Card>
+    <Card id="about-me">
       <h2 className="text-2xl">About me</h2>
 
       <p>

@@ -2,7 +2,7 @@ import { AboutMe } from "./sections/AboutMe/AboutMe";
 import { Experience } from "./sections/Experience/Experience";
 import { Home } from "./sections/Home/Home";
 import { SideBar } from "./sections/SideBar/SideBar";
-import { Skills } from "./sections/Skills/Skills"
+import { Skills } from "./sections/Skills/Skills";
 
 function App() {
   return (
