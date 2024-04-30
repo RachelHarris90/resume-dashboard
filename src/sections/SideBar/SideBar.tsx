@@ -1,27 +1,51 @@
-import { Navigation } from "../../components/Navigation/Navigation";
-import rachelProfilePicture from "./rachelProfilePicture.jpg";
-import LinkedInLogo from "./linkedin-logo.png";
-import GithubLogo from "./github-logo.png";
 import { Skills } from "../Skills/Skills";
+import { EmailIcon } from "./EmailIcon";
+import { GithubLogo } from "./GithubLogo";
+import { LinkedInLogo } from "./LinkedInLogo";
+import { PhoneIcon } from "./PhoneIcon";
+
+const sideBarItems = [
+  {
+    label: "linkedin.com/au/harrisrachel",
+    href: "https://www.linkedin.com/in/harrislrachel/",
+    component: <LinkedInLogo />,
+  },
+  {
+    label: "RachelHarris90",
+    href: "https://www.github.com/rachelharris90",
+    component: <GithubLogo />,
+  },
+  {
+    label: "+61 419 090 527",
+    href: "tel:+61419090527",
+    component: <PhoneIcon />,
+  },
+  {
+    label: "rachel.harris@msn.com",
+    href: "mailto:rachel.harris@msn.com",
+    component: <EmailIcon />,
+  },
+];
 
 export const SideBar = () => {
   return (
-    <div className="bg-white p-4 h-full w-72">
-      <img src={rachelProfilePicture} className="rounded-full w-32" />
+    <div className="bg-white p-4 md:p-8 space-y-2 h-full w-full md:w-72 rounded-lg">
       <h1 className="text-2xl">Rachel Harris</h1>
-      <div className="space-x-5 flex items-center">
-        <a
-          href="https://www.linkedin.com/in/harrislrachel/"
-          aria-label="LinkedIn"
-        >
-          <img src={LinkedInLogo} className="bg-rachel-light rounded-lg" />
-        </a>
-        <a href="https://www.github.com/rachelharris90" aria-label="Github">
-          <img src={GithubLogo} className="bg-rachel-light rounded-lg" />
-        </a>
+      <h2 className="text-lg">Software Developer</h2>
+      <div className="space-y-2 flex flex-col">
+        {sideBarItems.map((item) => (
+          <a
+            href={item.href}
+            aria-label="LinkedIn"
+            className="flex flex-row items-center gap-x-2"
+            key={item.label}
+          >
+            <div className="hidden sm:flex">{item.component}</div>
+            <span className="text-sm">{item.label}</span>
+          </a>
+        ))}
       </div>
-      {/* <Navigation /> */}
-      <Skills />
+      {/* <Skills /> */}
     </div>
   );
 };

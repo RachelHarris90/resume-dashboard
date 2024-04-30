@@ -42,19 +42,19 @@ const experienceHistory: ExperienceHistory[] = [
       "Responsible for the teams ways of working, delivery processes and people leadership for a team developing and improving the goals module. Focusing on individual development and supporting the growth of software developers. Working with support to prioritise and resolve support issues. Standing in for product management at times when the team was without a product manager.",
     workBreakdown: [
       {
-        workType: "Team management & leadership",
+        workType: "Team leadership",
         workPercentage: 40,
       },
       {
-        workType: "Planning & forecasting",
+        workType: "Planning",
         workPercentage: 20,
       },
       {
-        workType: "Stakeholder comms & reporting",
+        workType: "Stakeholder mgmt",
         workPercentage: 20,
       },
       {
-        workType: "Process improvement",
+        workType: "Process",
         workPercentage: 20,
       },
     ],
@@ -73,15 +73,15 @@ const experienceHistory: ExperienceHistory[] = [
         workPercentage: 60,
       },
       {
-        workType: "Finance & bookkeeping",
+        workType: "Finance",
         workPercentage: 20,
       },
       {
-        workType: "Rosters & training",
+        workType: "Team leadership",
         workPercentage: 10,
       },
       {
-        workType: "Stock & supplier management",
+        workType: "Stock management",
         workPercentage: 10,
       },
     ],
@@ -93,10 +93,10 @@ const experienceHistory: ExperienceHistory[] = [
     startDate: new Date("2019-05"),
     endDate: new Date("2019-12"),
     details:
-      "Leading multiple teams to design and build an intuitive bowser based application for accountants in accounting software. Focused on user journeys that covered complex tax and accounting areas. Conducted user interviews, co-design sessions while working closely with accountants. Coached business analysts, collaborated with other business functions to plan releases and product marketing and worked through solutions and issues with software developers.",
+      "Leading multiple teams to design and build an intuitive browser based application for accountants in accounting software. Focused on user journeys that covered complex tax and accounting areas. Conducted user interviews, co-design sessions while working closely with accountants. Coached business analysts, collaborated with other business functions to plan releases and product marketing and worked through solutions and issues with software developers.",
     workBreakdown: [
       {
-        workType: "Roadmap & story preparation",
+        workType: "Roadmap & work breakdown",
         workPercentage: 40,
       },
       {
@@ -104,11 +104,11 @@ const experienceHistory: ExperienceHistory[] = [
         workPercentage: 25,
       },
       {
-        workType: "Stakeholder management",
+        workType: "Stakeholder mgmt",
         workPercentage: 20,
       },
       {
-        workType: "Coaching",
+        workType: "Team leadership",
         workPercentage: 15,
       },
     ],
@@ -123,19 +123,19 @@ const experienceHistory: ExperienceHistory[] = [
       "Leading a team of software developers, a business analyst, quality analyst and an accountant to build browser based software for accountants in accounting practices. Participating in all parts of the discovery, design, development and release process in a “you build it, you run it” model. Represented the team in delivery and technical discussions, for the full stack from infrastructure to the UI.",
     workBreakdown: [
       {
-        workType: "Team management & leadership",
+        workType: "Team leadership",
         workPercentage: 40,
       },
       {
-        workType: "Planning & forecasting",
+        workType: "Planning",
         workPercentage: 20,
       },
       {
-        workType: "Stakeholder comms & reporting",
+        workType: "Stakeholder mgmt",
         workPercentage: 20,
       },
       {
-        workType: "Process improvement",
+        workType: "Process",
         workPercentage: 15,
       },
       {
@@ -162,7 +162,7 @@ const experienceHistory: ExperienceHistory[] = [
         workPercentage: 15,
       },
       {
-        workType: "Business training & support",
+        workType: "Business support",
         workPercentage: 15,
       },
     ],
@@ -177,19 +177,19 @@ const experienceHistory: ExperienceHistory[] = [
       "Scrum master for all development teams and release manager for several systems, with eight business analysts and a varied number of software developers reporting to me.",
     workBreakdown: [
       {
-        workType: "Iteration management",
+        workType: "Team leadership",
         workPercentage: 40,
       },
       {
-        workType: "Planning & forecasting",
+        workType: "Planning",
         workPercentage: 20,
       },
       {
-        workType: "Stakeholder management",
+        workType: "Stakeholder mgmt",
         workPercentage: 20,
       },
       {
-        workType: "Business support & training",
+        workType: "Business support",
         workPercentage: 20,
       },
     ],
@@ -216,7 +216,7 @@ const experienceHistory: ExperienceHistory[] = [
         workPercentage: 40,
       },
       {
-        workType: "Business support & training",
+        workType: "Business support",
         workPercentage: 20,
       },
     ],
@@ -243,7 +243,7 @@ const experienceHistory: ExperienceHistory[] = [
         workPercentage: 25,
       },
       {
-        workType: "Business support & training",
+        workType: "Business support",
         workPercentage: 25,
       },
     ],
@@ -259,14 +259,10 @@ const experienceHistory: ExperienceHistory[] = [
     workBreakdown: [
       {
         workType: "Business analysis",
-        workPercentage: 70,
+        workPercentage: 85,
       },
       {
-        workType: "Data conversion",
-        workPercentage: 15,
-      },
-      {
-        workType: "Business training & support",
+        workType: "Business support",
         workPercentage: 15,
       },
     ],
@@ -274,48 +270,13 @@ const experienceHistory: ExperienceHistory[] = [
 ];
 
 const barColors = [
-  "#f0f9ff",
-  "#e0f2fe",
-  "#bae6fd",
-  "#7dd3fc",
-  "#38bdf8",
-  "#0ea5e9",
-  "#f0f9ff",
-  "#e0f2fe",
-  "#bae6fd",
-  "#7dd3fc",
-  "#38bdf8",
-  "#0ea5e9",
-  "#f0f9ff",
-  "#e0f2fe",
-  "#bae6fd",
-  "#7dd3fc",
-  "#38bdf8",
-  "#0ea5e9",
-  "#f0f9ff",
-  "#e0f2fe",
-  "#bae6fd",
-  "#7dd3fc",
-  "#38bdf8",
-  "#0ea5e9",
-  "#f0f9ff",
-  "#e0f2fe",
-  "#bae6fd",
-  "#7dd3fc",
-  "#38bdf8",
-  "#0ea5e9",
-  "#f0f9ff",
-  "#e0f2fe",
-  "#bae6fd",
-  "#7dd3fc",
-  "#38bdf8",
-  "#0ea5e9",
-  "#f0f9ff",
-  "#e0f2fe",
-  "#bae6fd",
-  "#7dd3fc",
-  "#38bdf8",
-  "#0ea5e9",
+  "#3b82f6",
+  "#dbeafe",
+  "#2563eb",
+  "#bfdbfe",
+  "#1d4ed8",
+  "#93c5fd",
+  "#1e40af",
 ];
 
 export const useGetExperience = () => {

@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const navItems = [
   {
     link: "#about-me",

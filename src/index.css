@@ -3,5 +3,21 @@
 @tailwind utilities;
 
 body {
+  font-family: "Manrope", sans-serif;
   @apply bg-slate-100;
+}
+
+.splash {
+  width: 500px;
+  height: 500px;
+  background:
+    repeating-conic-gradient(#00f 0 3%, #0000 0 11%),
+    repeating-conic-gradient(#0000 0 5%, #00f 0 7%) 50% / 60% 60%,
+    repeating-conic-gradient(#0000 0 7%, #00f 0 9%) 20% / 70% 70%,
+    repeating-conic-gradient(#0000 0 11%, #00f 0 13%) 50% / 80% 80%,
+    radial-gradient(#00f 22%, #0000 0),
+    #fff;
+  background-repeat: no-repeat;
+  filter: blur(20px) contrast(50);
+  box-shadow: 0 0 0 50px #fff;
 }
