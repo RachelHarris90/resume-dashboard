@@ -1,24 +1,25 @@
 import { useState } from "react";
 import { ArrowDown } from "./ArrowDown";
 import { ArrowUp } from "./ArrowUp";
-import { ExperienceHistory, useGetBarColor } from "./useGetExperience";
+import { ExperienceHistory } from "./useGetExperience";
 import {
   Button,
   OverlayArrow,
   Tooltip,
   TooltipTrigger,
 } from "react-aria-components";
+import { useGetBarColor } from "./useGetBarColors";
 
 export const Bar = ({ experience }: { experience: ExperienceHistory }) => {
   const barColors = useGetBarColor();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="p-1">
+    <div className="p-1 hover:bg-slate-100 rounded">
       <li className="flex w-full items-center justify-between">
         <>
           <button
-            className="flex flex-row w-1/4 items-center gap-x-3 hover:bg-slate-100 rounded p-2 mr-2"
+            className="flex flex-row w-1/4 items-center gap-x-3 rounded p-2 mr-2"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <ArrowUp /> : <ArrowDown />}
@@ -55,7 +56,7 @@ export const Bar = ({ experience }: { experience: ExperienceHistory }) => {
         </>
       </li>
       {isOpen && (
-        <div className="py-4">
+        <div className="p-4" onClick={() => setIsOpen(false)}>
           <div className="flex flex-row justify-between font-semibold">
             <h4>{experience.company}</h4>
             <div>

@@ -1,4 +1,4 @@
-import { useGetBarColor } from "../sections/Experience/useGetExperience";
+import { useGetBarColor } from "../sections/Experience/useGetBarColors";
 
 export const Legend = () => {
   const barColors = useGetBarColor();

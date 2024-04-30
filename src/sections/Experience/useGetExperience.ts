@@ -269,35 +269,6 @@ const experienceHistory: ExperienceHistory[] = [
   },
 ];
 
-const barColors = [
-  "#3b82f6",
-  "#dbeafe",
-  "#2563eb",
-  "#bfdbfe",
-  "#1d4ed8",
-  "#93c5fd",
-  "#1e40af",
-];
-
 export const useGetExperience = () => {
   return experienceHistory;
-};
-
-export const useGetBarColor = () => {
-  const uniqueWorkTypes = new Set<string>();
-  const backgroundColor: { workType: string; color: string }[] = [];
-
-  experienceHistory.forEach((experience) => {
-    experience.workBreakdown.forEach((work) => {
-      if (!uniqueWorkTypes.has(work.workType)) {
-        uniqueWorkTypes.add(work.workType);
-        backgroundColor.push({
-          workType: work.workType,
-          color: barColors[backgroundColor.length % barColors.length],
-        });
-      }
-    });
-  });
-
-  return backgroundColor;
 };

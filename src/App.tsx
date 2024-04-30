@@ -1,23 +1,24 @@
+import { Card } from "./commonComponents/Card";
+import { Education } from "./components/Education/Education";
+import { Stats } from "./components/Stats/Stats";
 import { AboutMe } from "./sections/AboutMe/AboutMe";
 import { Experience } from "./sections/Experience/Experience";
 import { Home } from "./sections/Home/Home";
-import { Learning } from "./sections/Learning/Learning";
-import { SideBar } from "./sections/SideBar/SideBar";
+import { Interests } from "./sections/Interests/Interests";
 import { Skills } from "./sections/Skills/Skills";
 
 function App() {
   return (
-    <div className="App flex flex-col md:flex-row gap-2 m-2">
-      <header className="App-header">
-        <SideBar />
-      </header>
-      <main className="w-full gap-2 flex flex-col">
-        <Home />
-        <AboutMe />
-        <Experience />
+    <div className="App flex flex-col gap-4 p-4 w-full">
+      <Home />
+      <Stats />
+      <AboutMe />
+      <Experience />
+      <Card classNameOverride="flex flex-col md:flex-row md:gap-x-8 gap-y-4">
         <Skills />
-        <Learning />
-      </main>
+        <Education />
+      </Card>
+      <Interests />
     </div>
   );
 }
