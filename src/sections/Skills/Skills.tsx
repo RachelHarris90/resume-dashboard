@@ -1,4 +1,3 @@
-import { Card } from "../../commonComponents/Card";
 import { Tag } from "../../commonComponents/Tag";
 
 const technicalSkills = [
@@ -24,7 +23,7 @@ export const Skills = () => {
       <h3 className="text-lg">Technical skills</h3>
       <ul className="flex flex-wrap gap-x-2 gap-y-4">
         {technicalSkills.map((skill) => (
-          <li>
+          <li key={skill}>
             <Tag text={skill} />
           </li>
         ))}
@@ -32,7 +31,7 @@ export const Skills = () => {
       <h3 className="text-lg pt-4">Soft skills</h3>
       <ul className="flex flex-wrap gap-x-2 gap-y-4">
         {softSkills.map((skill) => (
-          <li>
+          <li key={skill}>
             <Tag text={skill} />
           </li>
         ))}

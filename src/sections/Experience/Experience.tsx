@@ -15,7 +15,10 @@ export const Experience = () => {
           breakdown of the type of work carried out in each role.
         </p>
         <Legend />
-        <div className="w-full flex flex-row pt-4">
+        <span className="w-full flex pt-4 font-medium">
+          Percentage of work by role
+        </span>
+        <div className="w-full flex flex-row">
           <div className="w-1/4" />
           <div className="flex w-3/4">
             {Array.from({ length: 4 }, (_, i) => (

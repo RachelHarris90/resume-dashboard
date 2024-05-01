@@ -25,7 +25,10 @@ export const Stats = () => {
   return (
     <div className="grid-cols-5 gap-x-4 grid">
       {stats.map((stat) => (
-        <div className="bg-[#581c87] rounded-lg px-8 py-4 grid items-center">
+        <div
+          className="bg-[#581c87] rounded-lg px-8 py-4 grid items-center"
+          key={`${stat.label1}${stat.label2}`}
+        >
           <span className="font-semibold text-white">{stat.label1}</span>
           <span className="text-white">{stat.label2}</span>
         </div>
